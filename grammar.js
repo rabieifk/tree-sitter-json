@@ -23,7 +23,7 @@ module.exports = grammar({
     ),
 
     object: $ => seq(
-      "{", commaSep($.pair), "}"
+      "[", commaSep($.pair), "]"
     ),
 
     pair: $ => seq(
@@ -33,7 +33,7 @@ module.exports = grammar({
     ),
 
     array: $ => seq(
-      "<", commaSep($._value), ">"
+      "{", commaSep($._value), "}"
     ),
 
     string: $ => choice(
