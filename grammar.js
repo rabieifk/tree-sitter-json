@@ -33,7 +33,7 @@ module.exports = grammar({
     ),
 
     array: $ => seq(
-      "[", commaSep($._value), "]"
+      "<", commaSep($._value), ">"
     ),
 
     string: $ => choice(
